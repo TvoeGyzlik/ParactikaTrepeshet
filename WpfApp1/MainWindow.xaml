@@ -1,0 +1,50 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+
+        <Menu VerticalAlignment="Top" Grid.ColumnSpan="6" Height="20">
+            <MenuItem Header="Выбор фигуры">
+                <RadioButton x:Name="rbSquare" Content="Квадрат" IsChecked="True" Checked="rblol_Checked"/>
+                <RadioButton x:Name="rbrectangle" Content="Прямоугольник" Checked="rblol_Checked" />
+                <RadioButton x:Name="rbtriangle" Content="Треугольник" Checked="rblol_Checked" />
+             
+            </MenuItem>
+            <MenuItem Header="О программе" Click="btninfo_Clicked"/>
+            <MenuItem Header="Выход" Click="btnexit_Clicked"/>
+        </Menu>
+        <TextBox x:Name="tbfirst" Grid.Row="2" Grid.Column="1"  ToolTip="Введите значение 1 стороны"/>
+        <TextBox x:Name="tbtwo" Grid.Row="3" Grid.Column="1"  ToolTip="Введите значение 2 стороны"/>
+        <TextBox x:Name="tbthree" Grid.Row="4" Grid.Column="1"  ToolTip="Введите значение 3 стороны"/>
+       
+        <TextBox x:Name="rezult" Grid.Row="5" Grid.Column="2" ToolTip="Периметр фигуры" IsReadOnly="True"/>
+        <Button Grid.Column="1" Grid.Row="7" Content="Решение" Click="btnResh_Clicked"/>
+
+    </Grid>
+</Window>
